@@ -1,0 +1,296 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eabe6b"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:nestedScrollingEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#eabe6b"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/store_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/image"
+                    android:layout_marginStart="20dp"
+                    android:layout_toEndOf="@+id/image"
+                    android:text="XXX咖啡店"
+                    android:textSize="26sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignStart="@+id/store_add"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/like" />
+
+                <TextView
+                    android:id="@+id/store_add"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/store_name"
+                    android:layout_margin="10dp"
+                    android:text="台北市中山北路一段200號"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:id="@+id/navigation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/store_add"
+                    android:layout_toEndOf="@+id/store_add"
+                    android:src="@drawable/map_location" />
+
+                <CheckBox
+                    android:id="@+id/isOpen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/store_add"
+                    android:layout_marginStart="50dp"
+                    android:text="現在營業"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/is_wifi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/isOpen"
+                    android:layout_marginStart="50dp"
+                    android:text="有無Wifi"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/is_plug"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/is_wifi"
+                    android:layout_marginStart="50dp"
+                    android:text="有無插座"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/is_time_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/store_add"
+                    android:layout_marginStart="50dp"
+                    android:layout_toRightOf="@id/isOpen"
+                    android:text="有無限時"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/is_meal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/is_time_limit"
+                    android:layout_below="@+id/is_time_limit"
+                    android:text="有賣正餐"
+                    android:textSize="18sp" />
+
+                <CheckBox
+                    android:id="@+id/is_dessert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/is_meal"
+                    android:layout_below="@+id/is_meal"
+                    android:text="有賣甜點"
+                    android:textSize="18sp" />
+
+
+                <LinearLayout
+                    android:id="@+id/button_linearlayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/store_add"
+                    android:layout_below="@+id/is_plug"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_gravity="center"
+                        android:id="@+id/store_img"
+                        android:layout_width="300dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="17dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/default_image" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+
+
+                        <LinearLayout
+                            android:id="@+id/takeout_position_linearlayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="外送地址 : " />
+
+                                <Button
+                                    android:id="@+id/bt_useCurrentGPS_position"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="60dp"
+                                    android:text="使用現在位置" />
+
+                            </LinearLayout>
+
+
+                            <EditText
+                                android:id="@+id/et_takeout_position"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="#def"
+                                android:textSize="15sp" />
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/tvtotalWorld"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBaseline="@+id/tvtotal"
+                                    android:layout_alignBottom="@+id/tvtotal"
+                                    android:layout_alignStart="@+id/canBeTakeOut"
+                                    android:text="目前總計" />
+
+                                <TextView
+                                    android:id="@+id/tvtotal"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBottom="@+id/store_img"
+                                    android:layout_marginStart="18dp"
+                                    android:layout_toRightOf="@+id/tvtotalWorld"
+                                    android:text="0"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="購買商品總數 : " />
+
+                                <TextView
+                                    android:id="@+id/tvTotalItemCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:text="0"
+                                    android:textSize="20sp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/takeout_item_layout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/canBeTakeOut"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignTop="@+id/store_img"
+                            android:layout_marginTop="10dp"
+                            android:text="提供外帶外送商品"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ivcart"
+                            android:layout_marginStart="10dp"
+                            android:src="@drawable/cart_rj"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content" />
+
+
+                        <Button
+                            android:layout_marginStart="10dp"
+                            android:id="@+id/btSubmit_buytakeout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/canBeTakeOut"
+                            android:layout_toStartOf="@+id/store_img"
+                            android:text="送出訂單" />
+
+                    </LinearLayout>
+
+
+                    <Spinner
+                        android:id="@+id/spinner_item"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/canBeTakeOut"
+                        android:layout_marginTop="10dp"
+                        android:background="#ffc600"></Spinner>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+                    android:id="@+id/lvStoreitem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/scrollView"
+                    android:layout_marginTop="10dp">
+                </com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView>
+            </ScrollView>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>
+
+
